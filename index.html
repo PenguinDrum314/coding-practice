@@ -79,7 +79,66 @@
       </div>
     </div>
 
-    <footer class="footer py-5 fixed-bottom">
+    <div class="container px-3 px-md-5">
+      <h1 class="fs-2 mb-4 mx-0">
+        新型コロナウイルスに対する取り組みの最新情報をご案内
+      </h1>
+
+      <div class="newsbox-q px-2 px-md-3 py-2">
+        <h2 class="fs-3 fw-normal m-0">■衛生面に関して</h2>
+      </div>
+
+      <div class="newsbox-a py-2">
+        <ul class="mb-3 lh-lg">
+          <li>・マスクを着用しての接客</li>
+          <li>・出勤前の検温の徹底</li>
+          <li>
+            ・レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置
+          </li>
+          <li>・より頻度の高い手洗いの励行</li>
+          <li>・テーブルにお客様用の消毒用アルコールの設置</li>
+          <li>・従業員間の距離確保ため、休憩や研修時の客席利用</li>
+        </ul>
+      </div>
+
+      <div class="newsbox-q px-2 px-md-3 py-2">
+        <h2 class="fs-3 fw-normal m-0">■お客様へのご協力のお願い</h2>
+      </div>
+
+      <div class="newsbox-a py-2">
+        <ul class="mb-3 lh-lg">
+          <li>・店内では、飲食時以外のマスク着用をお願いいたします</li>
+          <li>・入店時の手指の消毒にご協力ください</li>
+          <li>
+            ・レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください
+          </li>
+          <li>
+            ・多数でお越しの際は、お1人がまとめてご注文願います<br />
+            （混雑時に入場制限をする場合がございます）
+          </li>
+          <li>・発熱や体調不良の際はご入店をお控えください</li>
+        </ul>
+      </div>
+
+      <div class="newsbox-q px-2 px-md-3 py-2">
+        <h2 class="fs-3 fw-normal m-0">■サービスに関して</h2>
+      </div>
+
+      <div class="newsbox-a py-2">
+        <ul class="mb-3 lh-lg">
+          <li>・直接お渡しする商品の提供、金銭授受時にグローブの着用</li>
+          <li>・ドリンクやフードのサンプリング中止</li>
+          <li>・地域活動・イベントの中止</li>
+          <li>・混雑時間帯の客席の譲り合いへのご協力お願いの実施</li>
+          <li>・店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</li>
+          <li>
+            ・混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer py-5">
       <ul class="d-flex justify-content-center">
         <li class="footer-item me-3">
           <a class="nav-link" href="#">プライバシー</a>
@@ -123,6 +182,12 @@
               },
             },
           ],
+        });
+      });
+
+      $(function () {
+        $(".newsbox-q").on("click", function () {
+          $(this).next().slideToggle();
         });
       });
     </script>
