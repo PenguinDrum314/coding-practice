@@ -8,6 +8,16 @@
       rel="stylesheet"
     />
     <title>コーディング応用</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
     <link rel="stylesheet" href="css/base.css" />
   </head>
   <body>
@@ -51,6 +61,24 @@
       </div>
     </nav>
 
+    <div class="slider">
+      <div class="slider-img">
+        <img src="img/interior.jpg" class="d-block w-100" alt="画像１" />
+      </div>
+      <div class="slider-img">
+        <img src="img/restaurant.jpg" class="d-block w-100" alt="画像２" />
+      </div>
+      <div class="slider-img">
+        <img src="img/restaurant2.jpg" class="d-block w-100" alt="画像３" />
+      </div>
+      <div class="slider-img">
+        <img src="img/food.jpg" class="d-block w-100" alt="画像4" />
+      </div>
+      <div class="slider-img">
+        <img src="img/food2.jpg" class="d-block w-100" alt="画像5" />
+      </div>
+    </div>
+
     <footer class="footer py-5 fixed-bottom">
       <ul class="d-flex justify-content-center">
         <li class="footer-item me-3">
@@ -65,12 +93,38 @@
       </ul>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="main.js"></script>
     <script>
-        $(function() {
-            $('.navbar-toggler-icon').on('click',function(){
-                $("#collapse").toggleClass("show");
-            });
+      $(function () {
+        $(".navbar-toggler-icon").on("click", function () {
+          $("#collapse").toggleClass("show");
         });
+      });
+
+      $(function () {
+        $(".slider").slick({
+          arrows: true,
+          prevArrow: '<span class="prev-arrow"></span>',
+          nextArrow: '<span class="next-arrow"></span>',
+          autoplay: true,
+          autoplaySpeed: 4000,
+          dots: true,
+          slidesToShow: 2,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
     </script>
   </body>
 </html>
