@@ -9,7 +9,6 @@ ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
 	font-weight: normal;
 	font-size: 100%;
 	text-align: left;
-	list-style-type: none;
 	border-collapse: collapse;
 }
 
@@ -33,6 +32,10 @@ body {
 	-o-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.footer li {
+	list-style: none;
 }
 
 .navbar {
@@ -83,4 +86,36 @@ body {
 
 .newsbox-q {
 	background: #F4B6AE;
+}
+
+.shop-img {
+  width: 200px;
+  height: 200px;
+}
+
+.dli-pin-fill {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  line-height: 1;
+  position: relative;
+  width: 0.8em;
+  height: 0.8em;
+  background: currentColor;
+  border: 0.1em solid currentColor;
+  border-radius: 40% 60% 0% 100% / 40% 100% 0% 60%;
+  box-sizing: content-box;
+  transform: rotate(45deg);
+}
+
+.dli-pin-fill::before {
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 18%;
+  width: 0.336em;
+  height: 0.336em;
+  background: rgb(255, 238, 218);;
+  border-radius: 50%;
+  box-sizing: border-box;
 }
