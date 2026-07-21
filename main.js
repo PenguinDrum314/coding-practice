@@ -30,3 +30,21 @@ $(function () {
     $(this).next().slideToggle();
   });
 });
+
+$(function () {
+  const option = {
+    threshold: 0.3,
+  };
+  const observer = new IntersectionObserver(doWhenIntersect, option);
+  $(".inview_re").each(function () {
+    observer.observe(this);
+  });
+  function doWhenIntersect(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        $(entry.target).addClass("is-show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+});
